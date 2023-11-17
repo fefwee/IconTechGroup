@@ -1,0 +1,82 @@
+<div class="form">
+  <form [formGroup]="changeProfileForm">
+    <div class="card flex justify-content-center">
+      <span class="p-float-label">
+        <input pInputText id="username" formControlName="email" readonly />
+        <label htmlFor="username">Email</label>
+      </span>
+    </div>
+    <div class="card flex justify-content-center">
+      <span class="p-float-label">
+        <input
+          pInputText
+          id="username"
+          formControlName="firstName"
+          [ngClass]="{
+            validation:
+              (isForm && changeProfileForm.controls['firstName'].errors) ||
+              (!changeProfileForm.controls['firstName'].pristine &&
+                changeProfileForm.controls['firstName'].invalid)
+          }"
+        />
+        <label htmlFor="username">firstName</label>
+      </span>
+    </div>
+    <div class="card flex justify-content-center">
+      <span class="p-float-label">
+        <input
+          pInputText
+          id="username"
+          formControlName="lastName"
+          [ngClass]="{
+            validation:
+              (isForm && changeProfileForm.controls['lastName'].errors) ||
+              (!changeProfileForm.controls['lastName'].pristine &&
+                changeProfileForm.controls['lastName'].invalid)
+          }"
+        />
+        <label htmlFor="username">lastName</label>
+      </span>
+    </div>
+    <div style="margin: 15px 0">
+      <p-inputMask
+        mask="+7-999999999"
+        formControlName="phoneNumber"
+        type="tel"
+        id="username"
+        placeholder="phone"
+        [ngClass]="{
+          validation:
+            (isForm && changeProfileForm.controls['phoneNumber'].errors) ||
+            (!changeProfileForm.controls['phoneNumber'].pristine &&
+              changeProfileForm.controls['phoneNumber'].invalid)
+        }"
+      ></p-inputMask>
+    </div>
+    <div class="card flex justify-content-center">
+      <span class="p-float-label">
+        <input
+          pInputText
+          id="username"
+          formControlName="website"
+          [ngClass]="{
+            validation:
+              (isForm && changeProfileForm.controls['website'].errors) ||
+              (!changeProfileForm.controls['website'].pristine &&
+                changeProfileForm.controls['website'].invalid)
+          }"
+        />
+        <label htmlFor="username">url</label>
+      </span>
+    </div>
+
+    <div class="btn card">
+      <div class="card flex justify-content-center">
+        <p-button
+          label="Submit"
+          (click)="sendDataUser()"
+        ></p-button>
+      </div>
+    </div>
+  </form>
+</div>

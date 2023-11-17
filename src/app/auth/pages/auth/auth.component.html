@@ -1,0 +1,16 @@
+<div class="form">
+  <form [formGroup]="formAuthUSer">
+    <h1>Sign In</h1>
+    <div class="card flex column">
+      <input type="text" pInputText formControlName="login" />
+      <input type="text" pInputText formControlName="password" />
+    </div>
+    <div class="btn">
+      <div class="card flex justify-content-center">
+        <p-button label="Submit" (click)="sendAuthData()"></p-button>
+      </div>
+    </div>
+    <p *ngIf="authService.user.erorr === 'no'">Неправильный пароль</p>
+    <p *ngIf="authService.user.erorr === 'ok'">Пароль введен правильно</p>
+  </form>
+</div>

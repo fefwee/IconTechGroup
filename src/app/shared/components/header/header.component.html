@@ -1,0 +1,28 @@
+<header>
+  <div class="user_header">
+    <div>
+      <app-navigation></app-navigation>
+    </div>
+    <div class="flex_end">
+      <li routerLink="/profile">
+        <div class="user">
+          <p>Текущий юзер:</p>
+          <p>{{ dataUSer.firstName || firstName }}</p>
+          <p>{{ dataUSer.lastName || lastName }}</p>
+        </div>
+      </li>
+      <li><div *ngIf="isUpdate" class="update">update</div></li>
+      <li></li>
+      <li>
+        <div #close *ngIf="profileService.isValid">
+          error<span (click)="closeMessage()" class="close">X</span>
+        </div>
+      </li>
+      <li *ngIf="AuthService.user.role === null">Logout</li>
+      <li *ngIf="AuthService.user.isLogin" routerLink="profile">profile</li>
+      <li *ngIf="AuthService.user.role !== null">
+        role: {{ AuthService.user.role }}
+      </li>
+    </div>
+  </div>
+</header>

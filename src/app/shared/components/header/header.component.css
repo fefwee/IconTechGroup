@@ -1,0 +1,55 @@
+.user_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+li {
+    margin-left: 30px;
+}
+
+header {
+    margin-top: 20px;
+    background-color: #ffff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #435261;
+    margin-bottom: 20px;
+}
+
+.menu {
+    position: relative;
+}
+
+.update {
+    background-color: #435261;
+}
+
+.user {
+    display: flex;
+}
+
+.user p {
+    margin-right: 10px;
+}
+
+.update {
+    padding: 5px 10px;
+    background-color: rgb(179, 118, 28);
+}
+
+.error {
+    padding: 5px 10px;
+    background-color: rgb(191, 26, 26)
+}
+.close{
+    padding: 5px;
+    border:1px solid black;
+    margin-left: 0 10px;
+}

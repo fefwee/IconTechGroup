@@ -1,0 +1,22 @@
+.card{
+    margin-top: 20px;
+}
+.validation {
+    background: url('../../../../assets/Exclamationcircle.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x:95%;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    max-width: 50%;
+    border:1px solid #8676b6;
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
