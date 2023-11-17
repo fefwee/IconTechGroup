@@ -13,11 +13,11 @@ export const AuthGuard: CanActivateFn =
     | boolean
     | UrlTree => {
     const role = localStorage.getItem('role');
-      if(role === 'admin'){
-        return true
-      }
-      else{
-        return false
-      }
+    if (role === 'admin') {
+      return true
+    }
+    else {
+      return false
+    }
 
   };

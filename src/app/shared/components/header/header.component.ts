@@ -8,22 +8,20 @@ import { ProfileService } from 'src/app/services/profile.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
+
 export class HeaderComponent implements OnInit, OnDestroy {
 
+  @ViewChild("close") closeMess!: any;
   public destroy$ = new Subject<void>();
-
-  isMessage!: boolean;
-  isUpdate!: any;
+  public isUpdate!: any;
   public firstName = localStorage.getItem('first');
   public lastName = localStorage.getItem('last');
   public isRole = localStorage.getItem('role')
-  @ViewChild("close") closeMess!: any;
   public dataUSer!: any;
 
   constructor(public profileService: ProfileService,
     public AuthService: AuthService,
   ) { }
-
 
   ngOnInit(): void {
     this.profileService.profileUserData$.pipe(
@@ -47,8 +45,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.isUpdate = false;
     this.profileService.changeValid(false)
   }
-
-
 
   ngOnDestroy(): void {
     this.destroy$.next();

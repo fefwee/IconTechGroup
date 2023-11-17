@@ -48,8 +48,9 @@ header {
     padding: 5px 10px;
     background-color: rgb(191, 26, 26)
 }
-.close{
+
+.close {
     padding: 5px;
-    border:1px solid black;
+    border: 1px solid black;
     margin-left: 0 10px;
 }

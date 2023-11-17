@@ -10,7 +10,7 @@ export class AuthService {
     password: '123',
     role: null || localStorage.getItem('role'),
     erorr: '',
-    isLogin:false,
+    isLogin: false,
   }
 
   public role!: string;
@@ -25,11 +25,9 @@ export class AuthService {
       this.user.erorr = 'ok';
       this.user.isLogin = true;
     }
-    else{
+    else {
       this.user.erorr = 'no';
     }
-  
-
   }
 
 }

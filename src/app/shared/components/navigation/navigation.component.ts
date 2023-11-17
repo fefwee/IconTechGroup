@@ -8,5 +8,5 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavigationComponent {
 
-  constructor (public authSevice:AuthService){}
+  constructor(public authSevice: AuthService) { }
 }

@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { ProfileService } from './services/profile.service';
 import { AuthGuard } from './guards/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     BrowserAnimationsModule
   ],
-  providers: [ProfileService, {
+  providers: [ProfileService, AuthService, {
     provide: 'AuthGuard',
     useValue: AuthGuard
   }],

@@ -24,6 +24,6 @@ export class AuthComponent implements OnInit {
     this.authService.getUser(this.formAuthUSer.value);
     this.formAuthUSer.reset();
   }
- 
+
 
 }

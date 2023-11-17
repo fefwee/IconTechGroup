@@ -9,7 +9,7 @@ export interface UserData {
   lastName: string
   phone: number
   url: string,
-  error:boolean
+  error: boolean
 }
 
 @Injectable({
@@ -18,7 +18,7 @@ export interface UserData {
 
 export class ProfileService {
 
-  public isValid!:boolean;
+  public isValid!: boolean;
 
   public profileUserData$: any = new BehaviorSubject({
     email: '',
@@ -26,30 +26,29 @@ export class ProfileService {
     lastName: '',
     phone: 0,
     url: '',
-    error:null
+    error: null
   })
 
 
 
   constructor() { }
 
-  public getDataUser(data: UserData,isValid?:boolean) {
-    console.log(data)
-      localStorage.setItem('first',data.firstName);
-      localStorage.setItem('last',data.lastName);
+  public getDataUser(data: UserData, isValid?: boolean) {
+    localStorage.setItem('first', data.firstName);
+    localStorage.setItem('last', data.lastName);
 
-     this.profileUserData$.next({
+    this.profileUserData$.next({
       email: data.email,
       firstName: data.firstName,
       lastName: data.lastName,
       phone: data.phone,
       url: data.url,
-      error:isValid
+      error: isValid
     }
     )
     console.log(this.profileUserData$)
   }
-  changeValid(data:boolean){
+  changeValid(data: boolean) {
     this.isValid = data;
   }
 

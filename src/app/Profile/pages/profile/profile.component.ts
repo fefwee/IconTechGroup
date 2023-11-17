@@ -28,13 +28,11 @@ export class ProfileComponent implements OnInit {
 
   public sendDataUser() {
     if (!this.changeProfileForm.valid) {
-      console.log(1)
       this.isValid = true;
       this.profileService.changeValid(this.isValid);
- 
+
     }
     else {
-      console.log(2)
       this.isValid = false;
       this.profileService.changeValid(this.isValid);
       this.profileService.getDataUser(this.changeProfileForm.value)
